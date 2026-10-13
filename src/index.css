@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #050507;
+    --bg-surface: #090A0E;
+    --bg-card: #0E1015;
+    --bg-card-hover: #161820;
+    --text-primary: #F7F9FC;
+    --text-muted: #9CA3AF;
+    --text-subtle: #6B7280;
+    --border-subtle: rgba(255, 30, 39, 0.15);
+    --border-active: rgba(255, 30, 39, 0.6);
+    --accent-red: #FF1E27;
+    --accent-red-bright: #FF334B;
+    --accent-red-dark: #990A17;
+    --accent-red-glow: rgba(255, 30, 39, 0.4);
+  }
+
+  ::selection {
+    background: #FF1E27;
+    color: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: #D1D5DB;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Sexy Red-Black Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1C24;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 30, 39, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF1E27;
+  box-shadow: 0 0 10px #FF1E27;
+}
+
+/* Carbon & Technical Grid Backgrounds with Red Micro-Accents */
+.tech-grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.tech-dots-bg {
+  background-image: radial-gradient(rgba(255, 30, 39, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.carbon-pattern {
+  background: 
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.03) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.03) 15%, transparent 20%) 8px 9px;
+  background-color: #08090D;
+  background-size: 16px 16px;
+}
+
+/* Crimson Laser Scanline animation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1200%); }
+}
+
+.animate-scanline {
+  animation: scanline 7s linear infinite;
+}
+
+/* Marquee Animations for 2 opposing review rows */
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 44s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-scanline {
+    animation: none !important;
+  }
+}
+
+/* Sexy Red Glow effects */
+.glow-red {
+  box-shadow: 0 0 35px -2px rgba(255, 30, 39, 0.5);
+}
+
+.glow-red-subtle {
+  box-shadow: 0 0 18px -2px rgba(255, 30, 39, 0.3);
+}
+
+.glow-red-button {
+  box-shadow: 0 0 25px rgba(255, 30, 39, 0.45);
+}
+
+.glow-red-button:hover {
+  box-shadow: 0 0 35px rgba(255, 51, 75, 0.75);
+}
+
+/* Metallic Red borders */
+.metallic-card {
+  border: 1px solid rgba(255, 30, 39, 0.16);
+  background: linear-gradient(145deg, rgba(14, 16, 21, 0.95) 0%, rgba(9, 10, 14, 0.98) 100%);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metallic-card:hover {
+  border-color: rgba(255, 30, 39, 0.6);
+  box-shadow: 0 12px 35px -5px rgba(255, 30, 39, 0.18);
+}

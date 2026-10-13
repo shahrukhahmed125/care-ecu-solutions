@@ -1,0 +1,6 @@
+{
+  "name": "Care ECU Solutions — Automotive Diagnostics & ECU Repairs",
+  "description": "Premium automotive ECU diagnostics, circuit board repair, remapping, key programming and vehicle electronics specialist in Romford, UK.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

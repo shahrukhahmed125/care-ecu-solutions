@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Care ECU Solutions | Precision Automotive Diagnostics & ECU Repairs</title>
+    <meta name="description" content="Specialist automotive ECU repairs, vehicle diagnostics, remapping, immobiliser solutions, and key programming in Romford, Essex. Trusted by 5,000+ drivers." />
+    <meta property="og:title" content="Care ECU Solutions | Precision Automotive Diagnostics & ECU Repairs" />
+    <meta property="og:description" content="Specialist automotive ECU repairs, vehicle diagnostics, remapping, immobiliser solutions, and key programming in Romford, Essex. Over 10 years of engineering expertise." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://carecusolutions.co.uk" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Care ECU Solutions | Precision Automotive Diagnostics" />
+    <meta name="twitter:description" content="Specialist automotive electronics, ECU repairs, and programming solutions in Romford, UK." />
+    <meta name="theme-color" content="#050507" />
+    
+    <!-- Extension and runtime compatibility guard: provide safe fetch setter if window.fetch only has getter -->
+    <script>
+      (function() {
+        try {
+          var descriptor = Object.getOwnPropertyDescriptor(window, 'fetch') || 
+                             Object.getOwnPropertyDescriptor(Object.getPrototypeOf(window), 'fetch');
+          if (!descriptor || !descriptor.set) {
+            var activeFetch = window.fetch;
+            Object.defineProperty(window, 'fetch', {
+              get: function() {
+                return activeFetch;
+              },
+              set: function(newFetch) {
+                activeFetch = newFetch;
+              },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (err) {
+          // Fallback if property definition is restricted
+        }
+      })();
+    </script>
+
+    <!-- Premium Fonts: Syne / Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Care ECU Solutions",
+      "alternateName": "Car ECU Solutions Ltd",
+      "image": "https://carecusolutions.co.uk/logo.png",
+      "url": "https://carecusolutions.co.uk",
+      "telephone": "+447554535533",
+      "email": "CarEcuSolutions@mail.com",
+      "priceRange": "££",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit C4, Davison Way, Seedbed Centre",
+        "addressLocality": "Romford",
+        "addressRegion": "Essex",
+        "postalCode": "RM7 0AZ",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.5746,
+        "longitude": 0.1793
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/carecusolutions"
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#050507] text-[#F7F9FC] antialiased selection:bg-[#FF1E27]/30 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
